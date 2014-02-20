@@ -15,8 +15,8 @@ remote_file "#{Chef::Config[:file_cache_path]}/nginx.deb" do
   checksum "e2d6c544be6282daa148e2d1a0259309d94741a6803d797b63de521b7e0202f8"
 end
 
-package 'libpce3' do
-  action :install
+%w{libssl-dev libpcre3-dev}.each do |pkg|
+  package pkg
 end
 
 dpkg_package "nginx" do
