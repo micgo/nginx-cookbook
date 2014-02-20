@@ -12,7 +12,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/nginx.deb" do
   group "root"
   mode "0644"
   source "http://ec2-54-80-160-92.compute-1.amazonaws.com:8080/job/nginx-app/ws/nginx_1.4.1-1_amd64.deb"
-  checksum "e2d6c544be6282daa148e2d1a0259309d94741a6803d797b63de521b7e0202f8"
+  checksum "fda369e096ddbc52aec82f27ab61b5f0b2ad5a5538f06fd01ed23c7e593155b1"
 end
 
 %w{libssl-dev libpcre3-dev}.each do |pkg|
